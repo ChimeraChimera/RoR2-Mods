@@ -25,7 +25,7 @@ namespace ChevRoR
 
         public void Awake()
         {
-            DropRateModifier = Config.Bind("Main", "SacrificeArtifactDropRate", 5f, "Percent chance an item will drop from a monster on death. 1 is 1% drop rate, 100 is 100%, etc.");
+            DropRateModifier = Config.Bind("Main", "SacrificeArtifactDropRate", 100f, "Percent chance an item will drop from a monster on death. 1 is 1% drop rate, 100 is 100%, etc.");
             CustomWeightsEnabled = Config.Bind("Weights", "CustomWeightsEnabled", true, "If custom weights are enabled. Weights change how often some tiers of items will drop versus others.");
 
             IL.RoR2.Artifacts.SacrificeArtifactManager.OnServerCharacterDeath += (il) => // modification for overall drop % chance
